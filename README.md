@@ -175,6 +175,9 @@ docker run --name my_container -it rapidsim-env 0
 ``` 
 for the Brem 0 simulation.  
 
+**WARNING**: During the simulation you may observe some warnings. Don't worry, they come from the RapidSime code and they do not affect the result of the simulation.  
+
+
 3. Save the output to look at the plots and results: 
 ```bash
 mkdir -p ./output
@@ -194,13 +197,13 @@ mkdir -p ./input
 ``` 
 
 ```bash
-docker cp run:/home/user/Setting ./input
+docker cp my_contained:/home/user/Setting ./input
 ``` 
 ```bash
-docker cp run:/home/user/Simulation ./input
+docker cp my_container:/home/user/Simulation ./input
 ``` 
 ```bash
-docker cp run:/home/user/PreliminaryFit/BremX ./input
+docker cp my_container:/home/user/PreliminaryFit/BremX ./input
 ``` 
 
 **Afterward**
