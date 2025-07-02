@@ -51,7 +51,7 @@ void SetInputFile(int brem = - 1, TString typeOfParticle = "Electron")
         return;
     }
     // Open the input file in the correct brem directory
-    TString path = (name + std:to_string(brem) + "/" + fileRoot).c_str();
+    TString path = name + brem + "/" + fileRoot;
     std::cout <<"Path: "<<path<<"\n";
     TFile *inputFile = TFile::Open(path, "READ");
 
@@ -69,7 +69,7 @@ void SetInputFile(int brem = - 1, TString typeOfParticle = "Electron")
     // Copy
     CopyFunction(inputFile, outFile);
 
-    std::cout << "File Output: "<< fileRoot <<" saved in " << motherDir <<" configuration!" << '\n';
+    std::cout << "File Output: "<< fileRoot <<" saved in " << motherDir <<"configuration!" << '\n';
     std::cout << '\n';
 }
 

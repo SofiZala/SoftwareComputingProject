@@ -476,6 +476,7 @@ TGraphErrors *CreateGraph(std::string varName,
 
     return graph;
   }
+  return nullptr;
 }
 
 // save histo for electrons
