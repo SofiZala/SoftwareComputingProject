@@ -76,7 +76,7 @@ void fit() {
                         alpha, n, alpha1, n1);
 
   n1.setConstant(true);
-  n.setConstant(true);
+  //n.setConstant(true);
 
   // Plot fit and data
   PlotFitPlots(D0_M, data, signal, canvas, 0, "fitSignal");

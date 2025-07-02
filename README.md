@@ -190,7 +190,7 @@ Remember to substitute Brem**X** with 1 or 0!
 **[Optional]**
 4. If you want to look at the input smearing information you can copy them from the respective directory: 
 ```bash
-docker -p ./input
+mkdir -p ./input
 ``` 
 ```bash
 docker cp run:/home/user/Setting ./input
