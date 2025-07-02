@@ -69,11 +69,14 @@ void fit() {
   RooRealVar sigma("sigma", "Width", 40, 10, 100);
   RooRealVar sigma1("sigma1", "Width1", 20, 1, 100);
   RooRealVar alpha("alpha", "Alpha", 0.7, 0.001, 10);
-  RooRealVar n("n", "n", 0, 0, 200);
+  RooRealVar n("n", "n", 3, 0, 200);
   RooRealVar alpha1("alpha1", "Alpha1", 0.7, 0.001, 10);
   RooRealVar n1("n1", "n1", 0, 0, 200);
-  RooCrystalBall signal("signal", "signal", D0_M, mean, sigma, alpha, n, sigma1,
-                        alpha1, n1);
+  RooCrystalBall signal("signal", "signal", D0_M, mean, sigma, sigma1,
+                        alpha, n, alpha1, n1);
+
+  n1.setConstant(true);
+  n.setConstant(true);
 
   // Plot fit and data
   PlotFitPlots(D0_M, data, signal, canvas, 0, "fitSignal");
