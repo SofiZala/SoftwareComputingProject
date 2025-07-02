@@ -154,8 +154,8 @@ All encapsulated in:
 To get the software `clone` from the official repo and enter in the software folder:
 
 ```bash
-git clone linktotherepo
-cd SoftwareProject
+git clone https://github.com/SofiZala/SoftwareComputingProject.git
+cd SoftwareComputingProject
 ``` 
 ### Building and running the container (with Docker)
 The following steps illustrates how to run properly the simulation and observe the results.  
