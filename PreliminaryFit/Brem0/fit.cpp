@@ -91,7 +91,7 @@ void fit() {
 
   // Opening the file and defining the RDataFrame
   std::cout << "Defining RDataFrame ..." << '\n';
-  RooRealVar D0_M_bkg("D0_M_MeV", "D0 Mass", 1700, 1900, "MeV");
+  RooRealVar D0_M_bkg("D0_M_MeV", "D0 Mass", 1700, 2000, "MeV");
 
   std::string pathToFile_bkg = "../../Simulation/D02Kpipipi/Kpipipi_tree.root";
   ROOT::RDataFrame df_b("DecayTree", pathToFile_bkg);
@@ -193,7 +193,7 @@ void fit() {
       if(edm < 0.0001 && covQual == 3 && status == 0) break;
       std::cout << "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"<<'\n';
   }
-  
+
   // Plot fit and data
   PlotFitPlots(D0_M_bkg, data_bkg, bkg, canvas, 0, res);
 
