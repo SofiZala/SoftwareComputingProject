@@ -198,21 +198,22 @@ Covariance matrix:
 
 ### Input for RapidSim
 For the sake of an example, here we show some of the preliminary plots that are produced/used in the pipeline to obtain the final results. These plots corresponds **Brem 1** category:  
-- D* eta information
+- D* eta information  
 <p align="center">
   <img src="Images/eta.png" alt="Fit to D0 → Kπee in Brem 1 category" />
 </p>
-- D* pT information
+
+- D* pT information  
 <p align="center">
   <img src="Images/pT.png" alt="Fit to D0 → Kπee in Brem 1 category" />
 </p>
 
-- π⁺ TGraph for the smearing
+- π⁺ TGraph for the smearing  
 <p align="center">
-  <img src="Images/FitDataBrem1.png" alt="Fit to D0 → Kπee in Brem 1 category" />
+  <img src="Images/pip_graphB1.png" alt="Fit to D0 → Kπee in Brem 1 category" />
 </p>
 
-- e⁻ distribution for the smearing
+- e⁻ distribution for the smearing  
 <p align="center">
   <img src="Images/lm_sigmaP.png" alt="Fit to D0 → Kπee in Brem 1 category" />
 </p>
