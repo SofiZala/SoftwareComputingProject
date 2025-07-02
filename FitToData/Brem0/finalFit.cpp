@@ -193,9 +193,9 @@ void Plot(RooRealVar D0_M, RooDataSet data, RooAddPdf model, double nSig,
   model.plotOn(frame);
 
   frame->GetXaxis()->SetTitleSize(0);
-  frame->GetXaxis()->SetLabelSize(0.2);
-  frame->GetYaxis()->SetLabelSize(0.2);
-  frame->GetYAxis()->SetTitleSize(0.2);
+  frame->GetXaxis()->SetLabelSize(0.05);
+  frame->GetYaxis()->SetLabelSize(0.05);
+  frame->GetYaxis()->SetTitleSize(0.05);
   frame->SetTitle("");
 
   frame->Draw();
@@ -215,7 +215,7 @@ void Plot(RooRealVar D0_M, RooDataSet data, RooAddPdf model, double nSig,
   leg->Draw();
 
   // legend to print numeric results
-  TLegend *leg2 = new TLegend(0.1, 0.65, 0.35, 0.88);
+  TLegend *leg2 = new TLegend(0.05, 0.65, 0.35, 0.88);
   leg2->SetBorderSize(0);
   leg2->SetFillStyle(0);
   leg2->SetTextSize(0.05);
