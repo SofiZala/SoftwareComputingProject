@@ -180,10 +180,10 @@ for the Brem 0 simulation.
 mkdir -p ./output
 ``` 
 ```bash
-docker cp my_container:/home/user/FitToData/Brem**X**/FitData.png ./output
+docker cp my_container:/home/user/FitToData/BremX/FitData.png ./output
 ``` 
 ```bash
-docker cp my_container:/home/user/FitToData/Brem**X**/FitData_results.txt ./output
+docker cp my_container:/home/user/FitToData/BremX/FitData_results.txt ./output
 ``` 
 Remember to substitute Brem**X** with 1 or 0! 
 
@@ -200,7 +200,7 @@ docker cp run:/home/user/Setting ./input
 docker cp run:/home/user/Simulation ./input
 ``` 
 ```bash
-docker cp run:/home/user/PreliminaryFit/Brem**X** ./input
+docker cp run:/home/user/PreliminaryFit/BremX ./input
 ``` 
 
 **Afterward**
