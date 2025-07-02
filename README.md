@@ -68,7 +68,7 @@ This repository includes 4 sections, i.e. 4 directories, that correspond to the 
  
     + `Brem1/fit.cpp`: performs a fit to the signal and partially reconstructed background components of simulated data in the Brem 1 category. The purpose of this fit is to extract the parameter values of the signal and background probability density functions (PDFs), which will later be used in data fits. For the signal, the code fits a Johnson distribution to the D⁰ mass spectrum from `D⁰ → Kπee` simulated decays. For the background, a Bukin function is fitted to events from partially reconstructed `D⁰ → Kππeν` decays. Both samples are filtered to select a specific dilepton invariant mass window. The results are visualized through mass fits and pull distributions, and the extracted fit parameters are saved to text files along with convergence diagnostics and the covariance matrix.
 
-    INPUT: Rapidsim previous output *decay_tree.root* of the proper directory 
+    INPUT: Rapidsim previous output *decay_tree.root* of the proper directory   
     OUTPUT: *params_signal.txt* and *params_bkg.txt*, i.e. the file containing parameters to provide as input for the final fit to data.
 
 4. **FitToData**  
