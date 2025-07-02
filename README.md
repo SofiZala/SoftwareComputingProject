@@ -180,20 +180,27 @@ for the Brem 0 simulation.
 mkdir -p ./output
 ``` 
 ```bash
-docker cp my_container:/home/user/FitToData/BremX/FitData.png ./output
+docker cp my_container:/home/user/FitToData/Brem**X**/FitData.png ./output
 ``` 
 ```bash
-docker cp my_container:/home/user/FitToData/BremX/FitData_results.txt ./output
+docker cp my_container:/home/user/FitToData/Brem**X**/FitData_results.txt ./output
 ``` 
 Remember to substitute Brem**X** with 1 or 0! 
 
 **[Optional]**
-4. If you want to look at the input smearing information you can copy them from the respective directory: 
+4. If you want to look at the input information and at the plots provided to RapidSim, you can copy them from their respective directories:  
 ```bash
 mkdir -p ./input
 ``` 
+
 ```bash
 docker cp run:/home/user/Setting ./input
+``` 
+```bash
+docker cp run:/home/user/Simulation ./input
+``` 
+```bash
+docker cp run:/home/user/PreliminaryFit/Brem**X** ./input
 ``` 
 
 **Afterward**
