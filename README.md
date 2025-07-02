@@ -198,9 +198,9 @@ Covariance matrix:
 
 ### Input for RapidSim
 For the sake of an example, here we show some of the preliminary plots that are produced/used in the pipeline to obtain the final results. These plots corresponds **Brem 1** category:  
-- D* eta information  
+- D* phi information  
 <p align="center">
-  <img src="Images/eta.png" alt="Fit to D0 → Kπee in Brem 1 category" />
+  <img src="Images/phi.png" alt="Fit to D0 → Kπee in Brem 1 category" />
 </p>
 
 - D* pT information  
