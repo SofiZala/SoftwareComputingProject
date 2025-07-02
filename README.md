@@ -175,7 +175,10 @@ docker run --name my_container -it rapidsim-env 0
 ``` 
 for the Brem 0 simulation.  
 
-3. Save the output to look at the plots and results:  
+3. Save the output to look at the plots and results: 
+```bash
+mkdir -p ./output
+``` 
 ```bash
 docker cp my_container:/home/user/FitToData/BremX/FitData.png ./output
 ``` 
@@ -187,7 +190,10 @@ Remember to substitute Brem**X** with 1 or 0!
 **[Optional]**
 4. If you want to look at the input smearing information you can copy them from the respective directory: 
 ```bash
-docker cp run:/home/user/Setting ./output
+docker -p ./input
+``` 
+```bash
+docker cp run:/home/user/Setting ./input
 ``` 
 
 **Afterward**

@@ -45,7 +45,7 @@ void finalFit() {
                         alpha, n, alpha1, n1);
 
   // Mis ID bkg -> Bukin PDF
-  RooRealVar mean_bkg("mean_bkg", "Mean Mass", 1700, 1500, 1800);
+  RooRealVar mean_bkg("mean_bkg", "Mean Mass", 1700, 1500, 1950);
   RooRealVar width("width", "Width", 50, 1, 200);
   RooRealVar asym("asym", "asymm", -0.2, -10, 10);
   RooRealVar rhoL("rhoL", "rhoL", -0.1, -10, 10);

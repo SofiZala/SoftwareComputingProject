@@ -183,6 +183,17 @@ void fit() {
   RooBukinPdf bkg("bukin", "Bukin PDF", D0_M_bkg, mean_bkg, width, asym, rhoL,
                   rhoR);
 
+  RooFitResult* res;
+  for(int i = 0; i < 10; ++i)
+  {
+      res = bkg.fitTo(data_bkg, Extended(true), Save(true) /*, Strategy(1)*/);
+      float edm = res->edm();
+      int covQual = res->covQual();
+      float status = res->status();
+      if(edm < 0.0001 && covQual == 3 && status == 0) break;
+      std::cout << "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"<<'\n';
+  }
+  
   // Plot fit and data
   PlotFitPlots(D0_M_bkg, data_bkg, bkg, canvas, 0, res);
 
