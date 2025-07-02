@@ -39,7 +39,7 @@ The yields are extracted from the maximum likelihood fit to the D0 mass candidat
 ### Signal and background sources
 *Brem 1 category*  
 - signal: 𝐷0 → 𝐾−𝜋+𝑒+𝑒−  
-- background partially reconstructed: 𝐷0 → 𝐾−𝜋+𝜋-e+nu_e  (1 pion is mis-identified as electron and the neutrino is missed)  
+- background partially reconstructed: 𝐷0 → 𝐾−𝜋+𝜋-e+νₑ  (1 pion is mis-identified as electron and the neutrino is missed)  
 
 *Brem 0 category*    
 - signal: 𝐷0 → 𝐾−𝜋+𝑒+𝑒−  
@@ -137,7 +137,87 @@ The previously explained structure can be observe here:
 └── run_pipeline.sh <---
 ``` 
 
-***Note***:`<---` = code mentioned
+***Note***:`<---` = code mentioned  
+
+## Example
+### Final fit (output of the analysis)
+The image below shows an example of the result of the final fit to the reconstructed invariant mass distribution of the D⁰ candidate using the **Brem 1** category, so at least one bremsstrahlung photon has been recovered.
+
+In this fit, it can be seen the:
+    + **Signal (red dashed line)**: Represents events reconstructed as signal events, such as decays of D⁰ → K⁻π⁺e⁺e⁻. This is modeled using a **Johnson** probability density function (PDF), which effectively captures the asymmetric tails that arise due to residual bremsstrahlung effects and detector resolution.
+    + **Partially reconstructed background (green dotted line)**: Accounts for D⁰ → K⁻π⁺π⁻e⁺νₑ decays, where a neutrino escapes detection and one pion is misidentified as an electron. This background typically populates the lower sideband of the mass distribution since the reconstructed invariant mass is lower with respect to the expected because of the missing energy, and is modeled using a **Bukin PDF**, capable of handling asymmetric peak structures.
+    + **Combinatorial background (magenta dashed line)**: Represents random combinations of tracks that accidentally form a D⁰ candidate. This contribution is smooth and featureless, modeled with a first-order **Chebychev polynomial**.
+    + **Total fit (blue solid line)**: The sum of the three components fitted to the data using an extended maximum likelihood method.  
+The shaded region in the legend corresponds to the **signal region**, defined dynamically as **mean ± 3σ**, based on the fitted Johnson parameters. Within this region, the script calculates the estimated number of signal events (N_sig) and background events (N_bkg), and also reports their ratio (N_sig/N_bkg), which serves as a measure of signal purity.
+
+Below the main plot, the **pull distribution** quantifies the deviation between the data and the fit in each bin. It is defined as the difference between the data and the model, divided by the uncertainty. A well-behaved pull distribution should be centered around zero with most values within ±3, as shown here.
+
+<p align="center">
+  <img src="Images/FitDataBrem1.png" alt="Fit to D0 → Kπee in Brem 1 category" />
+</p>
+
+#### Fit results
+The corresponding fit parameters and diagnostic information are reported below, they come from the file `FitData_results.txt` (inside `Brem1`) `Brem1/finalFit.cpp` (in the Installation (using Docker) and usage section there are the instructions on how to retrieve it):
+```text
+Fit parameters:
+
+  RooFitResult: minimized FCN value: -2647.73, estimated distance to minimum: 9.23818e-05
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MINIMIZE=0 HESSE=0 
+
+    Constant Parameter    Value     
+  --------------------  ------------
+                  asym   -2.0968e-01
+                 delta    9.0222e-01
+                 gamma    4.7448e-01
+              mean_bkg    1.6892e+03
+                  rhoL   -1.8789e+00
+                  rhoR   -1.5041e+00
+                 width    1.0636e+02
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+                    c0   -6.6083e-01   -6.6076e-01 +/-  7.28e-02  <none>
+                  mean    1.8494e+03    1.8494e+03 +/-  1.91e+00  <none>
+                 nCheb    1.5706e+03    1.5703e+03 +/-  1.43e+02  <none>
+             nPartReco    2.6459e+02    2.6428e+02 +/-  1.03e+02  <none>
+                  nSig    1.1013e+03    1.1012e+03 +/-  7.16e+01  <none>
+                 sigma    3.3185e+01    3.3169e+01 +/-  2.57e+00  <none>
+
+Status: 0 (0 = success)
+Quality of the covariance matrix: 3
+Covariance matrix:
+0.00530168	0.034742	-8.31538	6.0785	2.23684	0.0388391	
+0.034742	3.66811	-85.0251	76.5107	8.51235	0.08898	
+-8.31538	-85.0251	20517.6	-12589.4	-6357.97	-140.048	
+6.0785	76.5107	-12589.4	10518.8	2334.66	20.3698	
+2.23684	8.51235	-6357.97	2334.66	5124.84	119.692	
+0.0388391	0.08898	-140.048	20.3698	119.692	6.62985	
+```  
+
+
+### Input for RapidSim
+For the sake of an example, here we show some of the preliminary plots that are produced/used in the pipeline to obtain the final results. These plots corresponds **Brem 1** category:  
+- D* eta information
+<p align="center">
+  <img src="Images/eta.png" alt="Fit to D0 → Kπee in Brem 1 category" />
+</p>
+- D* pT information
+<p align="center">
+  <img src="Images/pT.png" alt="Fit to D0 → Kπee in Brem 1 category" />
+</p>
+
+- π⁺ TGraph for the smearing
+<p align="center">
+  <img src="Images/FitDataBrem1.png" alt="Fit to D0 → Kπee in Brem 1 category" />
+</p>
+
+- e⁻ distribution for the smearing
+<p align="center">
+  <img src="Images/lm_sigmaP.png" alt="Fit to D0 → Kπee in Brem 1 category" />
+</p>
+
+
 
 ## Requirements  
 The project is based on:
