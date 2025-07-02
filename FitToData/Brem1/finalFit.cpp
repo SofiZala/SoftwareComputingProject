@@ -222,8 +222,8 @@ void Plot(RooRealVar D0_M, RooDataSet data, RooAddPdf model, double nSig,
   frame->GetXaxis()->SetTitleSize(0);
   frame->GetXaxis()->SetLabelSize(0.2);
   frame->GetYaxis()->SetLabelSize(0.2);
-  frame->GetYAxis()->SetTitleSize(0.2);
-  frame->SetTile("");
+  frame->GetYaxis()->SetTitleSize(0.2);
+  frame->SetTitle("");
   frame->Draw();
 
   // legend for the objects in the frame

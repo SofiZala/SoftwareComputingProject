@@ -196,7 +196,7 @@ void Plot(RooRealVar D0_M, RooDataSet data, RooAddPdf model, double nSig,
   frame->GetXaxis()->SetLabelSize(0.2);
   frame->GetYaxis()->SetLabelSize(0.2);
   frame->GetYAxis()->SetTitleSize(0.2);
-  frame->SetTile("");
+  frame->SetTitle("");
 
   frame->Draw();
 
