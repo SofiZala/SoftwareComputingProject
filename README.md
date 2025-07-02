@@ -143,11 +143,11 @@ The previously explained structure can be observe here:
 ### Final fit (output of the analysis)
 The image below shows an example of the result of the final fit to the reconstructed invariant mass distribution of the D⁰ candidate using the **Brem 1** category, so at least one bremsstrahlung photon has been recovered.
 
-In this fit, it can be seen the:
-    + **Signal (red dashed line)**: Represents events reconstructed as signal events, such as decays of D⁰ → K⁻π⁺e⁺e⁻. This is modeled using a **Johnson** probability density function (PDF), which effectively captures the asymmetric tails that arise due to residual bremsstrahlung effects and detector resolution.
-    + **Partially reconstructed background (green dotted line)**: Accounts for D⁰ → K⁻π⁺π⁻e⁺νₑ decays, where a neutrino escapes detection and one pion is misidentified as an electron. This background typically populates the lower sideband of the mass distribution since the reconstructed invariant mass is lower with respect to the expected because of the missing energy, and is modeled using a **Bukin PDF**, capable of handling asymmetric peak structures.
-    + **Combinatorial background (magenta dashed line)**: Represents random combinations of tracks that accidentally form a D⁰ candidate. This contribution is smooth and featureless, modeled with a first-order **Chebychev polynomial**.
-    + **Total fit (blue solid line)**: The sum of the three components fitted to the data using an extended maximum likelihood method.  
+In this fit, it can be seen the:  
+  + **Signal (red dashed line)**: Represents events reconstructed as signal events, such as decays of D⁰ → K⁻π⁺e⁺e⁻. This is modeled using a **Johnson** probability density function (PDF), which effectively captures the asymmetric tails that arise due to residual bremsstrahlung effects and detector resolution.
+  + **Partially reconstructed background (green dotted line)**: Accounts for D⁰ → K⁻π⁺π⁻e⁺νₑ decays, where a neutrino escapes detection and one pion is misidentified as an electron. This background typically populates the lower sideband of the mass distribution since the reconstructed invariant mass is lower with respect to the expected because of the missing energy, and is modeled using a **Bukin PDF**, capable of handling asymmetric peak structures.  
+  + **Combinatorial background (magenta dashed line)**: Represents random combinations of tracks that accidentally form a D⁰ candidate. This contribution is smooth and featureless, modeled with a first-order **Chebychev polynomial**.  
+  + **Total fit (blue solid line)**: The sum of the three components fitted to the data using an extended maximum likelihood method.    
 The shaded region in the legend corresponds to the **signal region**, defined dynamically as **mean ± 3σ**, based on the fitted Johnson parameters. Within this region, the script calculates the estimated number of signal events (N_sig) and background events (N_bkg), and also reports their ratio (N_sig/N_bkg), which serves as a measure of signal purity.
 
 Below the main plot, the **pull distribution** quantifies the deviation between the data and the fit in each bin. It is defined as the difference between the data and the model, divided by the uncertainty. A well-behaved pull distribution should be centered around zero with most values within ±3, as shown here.
