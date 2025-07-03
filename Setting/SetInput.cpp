@@ -69,7 +69,7 @@ void SetInputFile(int brem = - 1, TString typeOfParticle = "Electron")
     // Copy
     CopyFunction(inputFile, outFile);
 
-    std::cout << "File Output: "<< fileRoot <<" saved in " << motherDir <<"configuration!" << '\n';
+    std::cout << "File Output: "<< fileRoot <<" saved in " << motherDir <<" configuration!" << '\n';
     std::cout << '\n';
 }
 
