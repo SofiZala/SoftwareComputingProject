@@ -265,10 +265,13 @@ for the Brem 0 simulation.
 mkdir -p ./output
 ``` 
 ```bash
-docker cp my_container:/home/user/FitToData/BremX/FitData.png ./output
+docker cp my_container:/home/user/FitToData/BremX/FitDataX.png ./output
 ``` 
 ```bash
-docker cp my_container:/home/user/FitToData/BremX/FitData_results.txt ./output
+docker cp my_container:/home/user/FitToData/BremX/FitData_resultsX.txt ./output
+``` 
+```bash
+docker cp my_container:/home/user/FitToData/BremX/paramsFitX.txt ./output
 ``` 
 Remember to substitute Brem**X** with 1 or 0! 
 

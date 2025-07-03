@@ -122,7 +122,7 @@ void finalFit() {
   res->Print("v");
 
   // Save the results to a file
-  std::string filename = "FitData_results.txt";
+  std::string filename = "FitData_results0.txt";
   std::ofstream outFile(filename);
 
   if (outFile.is_open()) {
@@ -148,7 +148,7 @@ void finalFit() {
   }
 
   // Save the parameters to a file
-  params->writeToFile("paramsfit.txt");
+  params->writeToFile("paramsFit0.txt");
 }
 
 // ############ FUNCTIONS ############# //
@@ -258,5 +258,5 @@ void Plot(RooRealVar D0_M, RooDataSet data, RooAddPdf model, double nSig,
   line_plus3->Draw("same");
   line_minus3->Draw("same");
 
-  c->SaveAs("FitData.png");
+  c->SaveAs("FitData0.png");
 }
