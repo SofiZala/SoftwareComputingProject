@@ -158,7 +158,7 @@ Below the main plot, the **pull distribution** quantifies the deviation between 
 </p>
 
 #### Fit results
-The corresponding fit parameters and diagnostic information are reported below, they come from the file `FitData_results.txt` (inside `Brem1`) `Brem1/finalFit.cpp` (in the Installation (using Docker) and usage section there are the instructions on how to retrieve it):
+The corresponding fit parameters and diagnostic information are reported below, they come from the file `FitData_results1.txt` (inside `Brem1`) `Brem1/finalFit.cpp` (in the Installation (using Docker) and usage section there are the instructions on how to retrieve it):
 ```text
 Fit parameters:
 
