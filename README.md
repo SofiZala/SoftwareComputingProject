@@ -273,28 +273,30 @@ docker cp my_container:/home/user/FitToData/BremX/FitData_resultsX.txt ./output
 ```bash
 docker cp my_container:/home/user/FitToData/BremX/paramsFitX.txt ./output
 ``` 
-Remember to substitute Brem**X** with 1 or 0! 
+Remember to substitute **X** with 1 or 0! 
 
 **[Optional]**
 4. If you want to look at the input information and at the plots provided to RapidSim, you can copy them from their respective directories:  
 ```bash
-mkdir -p ./input
+mkdir -p ./input/BremX
 ``` 
 
 ```bash
-docker cp my_container:/home/user/Setting ./input
+docker cp my_container:/home/user/Setting ./input/BremX
 ``` 
 ```bash
-docker cp my_container:/home/user/Simulation ./input
+docker cp my_container:/home/user/Simulation ./input/BremX
 ``` 
 ```bash
-docker cp my_container:/home/user/PreliminaryFit/BremX ./input
+docker cp my_container:/home/user/PreliminaryFit/BremX ./input/BremX
 ``` 
+Remember to substitute **X** with 1 or 0! 
 
 **Afterward**
 ```bash
 docker rm my_container
 ```
+***Note***: If you run both the simulations you can compare the saved results in the output directory. 
 
 ***Note***: you may need `sudo` permissions to build, run and remove the container and also to copy files from inside the container to the outside. 
 
